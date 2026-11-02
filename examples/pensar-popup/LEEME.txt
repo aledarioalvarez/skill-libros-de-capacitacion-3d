@@ -1,0 +1,31 @@
+LE HABÍAN ENSEÑADO A PENSAR — LIBRO POP-UP 3D
+
+1. Extraé todos los archivos del ZIP.
+2. Abrí index.html en Edge o Chrome con WebGL 2 disponible.
+3. Pulsá Desplegar maqueta: el edificio emerge de las páginas.
+4. Elegí un método y pulsá Reproducir.
+5. Podés pausar, avanzar por pasos, reiniciar y cambiar la altura.
+6. Usá los controles de cámara para girar, acercar y alejar.
+7. Ver esquema 2D ofrece la alternativa con el mismo avance.
+
+El HTML incluye el motor 3D y funciona sin conexión. No requiere instalación.
+La guía se abre desde el libro o desde guia-facilitador.html.
+Las notas y el progreso son locales al navegador, cuando este permite guardarlos.
+
+ALCANCE
+Versión reconstruida a partir del relato aportado, con seis capítulos y siete métodos.
+No es una reparación del archivo original de ese libro, que no estuvo disponible.
+La atribución histórica de la anécdota no se presenta como verificada.
+Los métodos son modelos didácticos con sus supuestos expresos; no son instrucciones
+para realizar experimentos peligrosos en edificios reales.
+
+PRUEBAS
+Sintaxis y compilación correctas; 12 comprobaciones aprobadas del controlador,
+los modelos y la independencia de scripts/estilos externos.
+El navegador de pruebas no pudo iniciarse. El navegador integrado bloqueó abrir
+archivos locales. Por eso no se afirma una verificación visual, de WebGL o móvil.
+Ver verificacion.txt para el detalle.
+
+LICENCIA
+Three.js 0.186.1 está incorporado en index.html. Se conserva su licencia MIT
+en THREE-LICENSE.txt.

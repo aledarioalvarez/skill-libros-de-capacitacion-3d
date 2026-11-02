@@ -1,0 +1,6 @@
+VERIFICACIÓN
+12 comprobaciones aprobadas de sintaxis, controlador y modelos con DOM simulado en Node.
+Incluyen los siete métodos: reproducción, pausa, reinicio, pasos, final; caída cuadrática; péndulo; movimiento reducido; límites de altura; HTML sin scripts ni estilos externos.
+
+LIMITACIÓN
+No se completó la prueba visual ni de interacciones en navegador real. Edge automatizado no pudo iniciarse y el navegador integrado rechazó el protocolo de archivos locales. Estas pruebas de lógica no acreditan renderizado WebGL, diseño móvil ni funcionamiento en un teléfono físico.

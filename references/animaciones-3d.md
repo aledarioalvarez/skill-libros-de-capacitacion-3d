@@ -1,4 +1,6 @@
-# Animaciones 3D — versión 0.3
+# Animaciones 3D — versión 0.4
+
+Para la composición pop-up aprobada, leer calidad-popup.md. La escena debe parecer construida sobre las páginas; el movimiento del contenido debe explicar un proceso o relación además del despliegue del libro.
 
 ## Diseño
 
@@ -29,3 +31,4 @@ Detectar fallo al crear WebGLRenderer y pérdida de contexto. Mantener el mismo 
 ## Verificación antes de entregar
 
 Comprobar WebGL activo y geometrías reales; arrastre y controles de cámara; cercanía y encuadre restablecidos; pausa real del objeto; ambos caminos de cada decisión; retroceso y reinicio; modo sin movimiento; cambio de capítulo sin contextos o temporizadores acumulados; vista móvil; ejecución sin internet y fallback sin WebGL. Revisar capturas de los estados relevantes y el texto equivalente. Distinguir pruebas automatizadas de validación en un teléfono físico; no afirmar esta última sin haberla hecho.
+

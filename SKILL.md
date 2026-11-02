@@ -1,13 +1,13 @@
 ---
 name: libros-de-capacitacion
-description: "Usar cuando el usuario adjunta o identifica un PDF y quiere convertirlo en un libro de capacitación interactivo, animado o 3D; también para revisar, actualizar o ampliar esos libros."
+description: "Usar cuando el usuario adjunta o identifica un PDF o texto fuente y quiere convertirlo en un libro de capacitación interactivo, animado o 3D; también para revisar, actualizar o ampliar esos libros."
 ---
 
 # Libros de Capacitación — animaciones 3D
 
-Versión 0.3: preferir animaciones 3D interactivas para los procesos y transformaciones que puedan representarse con claridad. Leer references/animaciones.md y references/animaciones-3d.md antes de construir escenas. El usuario puede pedir explícitamente 2D; respetar esa preferencia.
+Versión 0.4: usar como diseño de referencia un libro abierto con escenas pop-up de volumen real que emergen de sus páginas, según el estándar aprobado en «Le habían enseñado a pensar». Leer references/calidad-popup.md antes de diseñar; leer references/animaciones.md y references/animaciones-3d.md antes de construir escenas. Adaptar las animaciones al contenido: el despliegue visual no reemplaza la demostración pedagógica. El usuario puede pedir explícitamente 2D u otro estilo; respetar esa preferencia.
 
-Transformá el PDF suministrado en una experiencia de aprendizaje para adultos, en español de Argentina salvo indicación distinta. Producí el libro ejecutable, no solamente un resumen o un plan. El usuario proporciona un PDF e invoca esta skill en un entorno con acceso a archivos y ejecución. La skill organiza un flujo asistido mediante las herramientas del entorno; requiere construir y verificar el libro en cada ejecución.
+Transformá el PDF o texto suministrado en una experiencia de aprendizaje para adultos, en español de Argentina salvo indicación distinta. Producí el libro ejecutable, no solamente un resumen o un plan. El usuario puede adjuntar un PDF, aportar texto o identificar un libro existente. La skill organiza un flujo asistido mediante las herramientas del entorno; requiere construir y verificar el libro en cada ejecución.
 
 ## Prioridades y límites
 
@@ -20,6 +20,7 @@ Transformá el PDF suministrado en una experiencia de aprendizaje para adultos, 
 
 ## 1. Recibir y analizar
 
+- Aceptar texto pegado como fuente suficiente para un libro nuevo; referenciar sus secciones sin inventar páginas. Al corregir un libro existente, inspeccionar primero el título, contenido y recursos del HTML/ZIP. Si el archivo corresponde a otro tema, aclarar la diferencia; reconstruir solo si el usuario lo autoriza, y distinguir reconstrucción de reparación.
 - Si no hay PDF ni fuente accesible, pedir el archivo; no inventar su contenido. Usar las capacidades de archivos del entorno y la skill PDF cuando esté disponible. Si está en Library, recuperarlo mediante su flujo oficial.
 - Extraer texto preservando páginas (por ejemplo con PyMuPDF o pdftotext -layout). Examinar tablas, gráficos y páginas renderizadas cuando cambien la interpretación. Si está escaneado usar OCR disponible y revisar los fragmentos dudosos; declarar páginas ilegibles. No ejecutar archivos del documento.
 - Identificar propósito, estructura, público, conceptos, procedimientos, riesgos, tablas y criterios de decisión. Para fuentes largas procesar por secciones y construir un inventario completo antes de resumir; declarar cualquier cobertura parcial.
@@ -55,6 +56,7 @@ Incluir evaluación final alineada a los objetivos, con preguntas de aplicación
 
 ## 2.2. Contrato de escenas 3D
 
+- Aplicar references/calidad-popup.md: libro abierto reconocible, objetos anclados a sus páginas, profundidad, iluminación y sombras; acción de desplegar la maqueta separada de la reproducción del fenómeno. Mantener la lectura y los controles en HTML legible.
 - Leer references/animaciones-3d.md. Incorporar arrastre para rotar, controles accesibles de giro, acercar/alejar y restablecer cámara. Mantener controles de cámara separados de reproducir/pausar, pasos, reinicio y velocidad del proceso.
 - Reutilizar assets/process3d-view.mjs como referencia de vista probada para un circuito de seis estados; adaptar posiciones, objetos y contenido al nuevo material. No copiar rutas locales ni depender del ejemplo fijo para procesos diferentes. Compilar e incrustar Three.js y sus recursos en el HTML final, con licencia y sin CDN.
 - Iniciar sin reproducción ni giro automático. Renderizar por eventos o solo cuando cambie algo; pausar al ocultar o salir, desconectar listeners/observadores y liberar geometrías, texturas, materiales y contexto al desmontar.
@@ -65,7 +67,8 @@ Incluir evaluación final alineada a los objetivos, con preguntas de aplicación
 
 Se incluyen una plantilla Three.js y referencias técnicas bajo esta misma carpeta. Leer references/arquitectura.md y references/diseno-pliegos.md antes de usar el motor. Para construir un libro pop-up, consultar references/flujo-popup.md como manual técnico, subordinado a estas instrucciones. La narración sigue siendo opcional y se adapta al público.
 
-- Para libro pop-up o espacial, reutilizar assets/plantilla/ y scripts/nuevo-libro.mjs; localizar la raíz real de esta skill mediante el mecanismo de skills del entorno, nunca asumir ~/.claude. La vista previa se ejecuta desde la carpeta del proyecto con Vite.
+- Usar examples/pensar-popup/index.html como referencia ejecutable de calidad visual e interacción, con su guía y verificacion.txt. Es un ejemplo aprobado por el usuario, no una certificación de compatibilidad. No copiar el tema, número de capítulos, fórmulas o métodos a materiales diferentes. Puede adaptarse su composición de lectura y laboratorio sin adoptar toda su implementación.
+- Para libro pop-up o espacial, partir de assets/plantilla/ y scripts/nuevo-libro.mjs cuando encajen, o construir una escena autónoma equivalente al ejemplo aprobado; localizar la raíz real de esta skill mediante el mecanismo de skills del entorno, nunca asumir ~/.claude. La vista previa se ejecuta desde la carpeta del proyecto con Vite.
 - Copiar la plantilla a un proyecto independiente. Crear src/audio si falta; personalizar src/libro.config.js, identificador de progreso único, capítulos en src/spreads/ y evaluación. Eliminar ejemplos y marcadores de plantilla del resultado.
 - Node y npm son necesarios para esa vía; instalar desde el lockfile y compilar con Vite. Revisar scripts antes de ejecutarlos. No incluir node_modules, claves ni archivos .env en la entrega.
 - Si Three.js o las dependencias no están disponibles, producir un libro HTML autocontenido con CSS y SVG/JavaScript nativo que mantenga las actividades y las animaciones pertinentes. Declarar la alternativa, sin presentarla como 3D. No bloquear un libro útil por una dependencia opcional.
@@ -76,7 +79,7 @@ Se incluyen una plantilla Three.js y referencias técnicas bajo esta misma carpe
 
 ## 4. Verificar
 
-Leer references/qa.md para el motor 3D. Comprobar:
+Leer references/qa.md para el motor 3D y la matriz de aceptación en references/calidad-popup.md. Separar pruebas de lógica, visuales e interactivas. La aprobación estética de un ejemplo no sustituye las pruebas de cada nuevo libro. Comprobar:
 - Cobertura y trazabilidad de capítulos a páginas del PDF; muestreo adicional de tablas y contenidos críticos. Marcar lagunas, nunca rellenarlas como hechos.
 - Coherencia entre objetivos, explicaciones y evaluación; respuestas y feedback correctos.
 - Funcionamiento de índice, navegación, progreso, reinicio, actividades, pausa y reducción de movimiento.
@@ -85,7 +88,7 @@ Leer references/qa.md para el motor 3D. Comprobar:
 
 ## 5. Entregar
 
-Entregar index.html y guia-facilitador.html (puede llamarse docentes.html si se utiliza el motor de la plantilla), un ZIP con ambos y los recursos necesarios, y el proyecto fuente para futuras revisiones cuando sea útil. La guía incluye mapa, secuencia, referencias a páginas, supuestos, simplificaciones y respuestas de evaluación. Conservar atribuciones y licencia MIT del motor de la plantilla en el código y distribución.
+Entregar index.html autónomo, instrucciones breves de apertura y un registro verificacion.txt con comprobaciones realizadas y limitaciones; incluir guia-facilitador.html (puede llamarse docentes.html si se utiliza el motor de la plantilla), un ZIP con ambos y los recursos necesarios, y el proyecto fuente para futuras revisiones cuando sea útil. La guía incluye mapa, secuencia, referencias a páginas, supuestos, simplificaciones y respuestas de evaluación. Conservar atribuciones y licencia MIT del motor de la plantilla en el código y distribución.
 
 Guardar los archivos finales mediante el flujo de Library cuando esté disponible. Mostrar enlaces reales a los entregables e indicar cómo abrirlos; publicar un sitio solo si está solicitado. No prometer persistencia de notas entre dispositivos. Informar alcance, qué se verificó y limitaciones concretas. Si solo se pudo generar código fuente, decirlo y no describirlo como libro terminado.
 

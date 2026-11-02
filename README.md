@@ -1,14 +1,15 @@
 # Libros de Capacitación
 
-Skill para transformar PDF en libros de capacitación interactivos, con animaciones 3D cuando aporten claridad.
+Skill para transformar PDF o texto fuente en libros de capacitación con escenas pop-up 3D: gráficos con volumen que emergen de las páginas y animaciones que ayudan a comprender.
 
-**Versión 0.3 · Español · HTML autocontenido · Actividades y evaluación**
+**Versión 0.4.0 · Español · HTML autocontenido · Actividades y evaluación**
 
 ## Qué hace
 
-- Lee y organiza el PDF en objetivos y capítulos.
+- Lee y organiza el PDF o texto fuente en objetivos y capítulos.
 - Conserva referencias a las páginas y distingue contenido fuente de ejemplos añadidos.
 - Identifica procesos, decisiones, transformaciones y relaciones que conviene visualizar.
+- Presenta un libro abierto con profundidad, sombras y despliegue de objetos desde sus páginas.
 - Construye escenas 3D con reproducción, pausa, pasos, bifurcaciones y controles de cámara.
 - Ofrece alternativas 2D y texto cuando WebGL no está disponible.
 - Incluye ejercicios, retroalimentación y una guía para facilitar la capacitación.
@@ -23,9 +24,9 @@ Skill para transformar PDF en libros de capacitación interactivos, con animacio
    ```
 
 2. Instalá su carpeta en el directorio de skills de tu asistente, siguiendo las indicaciones del cliente. Deben conservarse las carpetas de recursos junto a `SKILL.md`.
-3. Proporcioná el PDF y pedí:
+3. Proporcioná el PDF o texto fuente y pedí:
 
-> Usá la skill Libros de Capacitación para convertir este PDF en un libro. Identificá sus procesos y representalos con animaciones 3D interactivas, decisiones y controles paso a paso.
+> Usá la skill Libros de Capacitación para convertir este material en un libro pop-up: que los gráficos salgan de las páginas, con animaciones que expliquen el contenido, controles de cámara, reproducción, pausa y pasos.
 
 El cliente debe admitir skills y acceso a archivos. Para producir los entregables también se necesitan herramientas de ejecución; tener el texto de la skill no crea un servicio de conversión por sí solo. La forma de instalación y activación depende del asistente utilizado.
 
@@ -39,6 +40,8 @@ El cliente debe admitir skills y acceso a archivos. Para producir los entregable
 | `assets/process-model.mjs` | Modelo de estados, transiciones e historial |
 | `assets/process3d-view.mjs` | Referencia de vista 3D para procesos de seis estaciones, adaptable al material |
 | `scripts/nuevo-libro.mjs` | Preparación de un proyecto desde la plantilla |
+| `examples/pensar-popup/` | Libro autónomo aprobado como referencia, guía, licencias y alcance de verificación |
+| `references/calidad-popup.md` | Estándar visual, interacción y matriz de aceptación |
 | `references/` | Arquitectura, diseño pedagógico, animaciones, accesibilidad y pruebas |
 
 ## Requisitos
@@ -60,6 +63,12 @@ El comando prepara los archivos; el asistente todavía debe adaptar contenidos, 
 ## Qué entrega
 
 Un libro `index.html`, una guía del facilitador y un paquete de descarga con los recursos necesarios. El HTML puede distribuirse sin conexión si todos los recursos fueron incorporados durante la construcción. No se publica automáticamente ni se conectan servicios externos por defecto.
+
+## Ejemplo de referencia
+
+[Le habían enseñado a pensar](examples/pensar-popup/index.html) incluye un libro abierto, edificio y barómetro volumétricos, siete demostraciones, alternativa 2D y evaluación. Para usarlo, descargá el repositorio completo y abrí ese archivo en un navegador compatible; la vista de código de GitHub no ejecuta el HTML.
+
+Consultá su [guía](examples/pensar-popup/guia-facilitador.html) y el [registro de verificación](examples/pensar-popup/verificacion.txt). El ejemplo fue aprobado por el usuario y pasó comprobaciones de lógica; la prueba visual automatizada quedó pendiente por limitaciones del entorno. Cada nuevo libro debe verificarse por separado. No es obligatorio repetir su tema, paleta ni cantidad de capítulos.
 
 ## Criterio pedagógico
 

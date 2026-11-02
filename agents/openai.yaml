@@ -1,5 +1,5 @@
 interface:
   display_name: Libros de Capacitación
-  short_description: PDF a libros con animaciones 3D
-  default_prompt: Convertí el PDF adjunto en un libro de capacitación con animaciones
-    3D pertinentes, decisiones y controles paso a paso.
+  short_description: Libros pop-up con animaciones 3D
+  default_prompt: Convertí el PDF o texto fuente en un libro de capacitación pop-up, con gráficos
+    que emerjan de las páginas, animaciones pertinentes, decisiones y controles paso a paso.
