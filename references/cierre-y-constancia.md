@@ -23,6 +23,12 @@ Usar una fuente de verdad para requisitos, resultado visible y PDF. No habilitar
 - Diseñar una página compacta y legible, por ejemplo A5 horizontal, con jerarquía, contraste y márgenes. Evitar adornos que compitan con nombre, curso y resultado. Mantener texto seleccionable cuando sea viable. Si se rasteriza el nombre para soportar fuentes locales, conservar suficiente resolución y revisar los glifos.
 - Incrustar en el HTML la biblioteca y recursos necesarios. Conservar sus licencias (el ejemplo usa pdf-lib 1.17.1). Deshabilitar descargas duplicadas durante la generación, manejar errores con opción de reintento y liberar las URL temporales después de iniciada la descarga.
 
+## Identificación de la descarga
+
+Mostrar el nombre ingresado y el resultado antes de generar el PDF. Leer el nombre actual del formulario al descargar y usarlo también en un nombre de archivo seguro, junto al identificador del curso. Informar al finalizar qué archivo se preparó. No entregar un PDF fijo de demostración como si fuera una constancia personalizada; mantener los artefactos de prueba fuera de la entrega al participante.
+
+Comprobar dos nombres consecutivos: el nombre visible, el parámetro enviado al generador, el PDF resultante y su nombre de archivo deben corresponder al participante actual. Los mensajes deben insertar el nombre como texto, no como HTML.
+
 ## Verificación
 
 1. Requisitos: debajo del umbral, en el límite y por encima; sin reflexión cuando es requerida; evaluación incompleta o aún sin comprobar; no habilitar antes de tiempo.

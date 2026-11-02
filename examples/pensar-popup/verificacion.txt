@@ -14,3 +14,8 @@ descarga simulada, recarga sin repetir celebración, edición, movimiento reduci
 PDF reales generados con el módulo final y renderizados con PDFium; revisión visual
 de nombre de ejemplo, nombre largo y Unicode con fuentes locales disponibles.
 No se completó una prueba en navegador real de la animación ni de la descarga.
+
+0.5.1: verificado con DOM simulado que dos nombres consecutivos se transmiten
+al generador correcto, se muestran como texto y producen nombres de archivo
+diferentes y personalizados. No sustituye una prueba de descarga en navegador.
+

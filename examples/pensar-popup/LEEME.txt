@@ -45,3 +45,9 @@ PRUEBAS DEL CIERRE
 simulado; PDF renderizados e inspeccionados con nombres de ejemplo, largos y Unicode
 con fuentes disponibles. La prueba visual de la animación y la descarga en navegador
 real siguen pendientes. No se afirma validación en teléfono físico.
+
+IDENTIFICACIÓN DE LA DESCARGA (0.5.1)
+Antes de descargar se muestra el nombre ingresado. El PDF se guarda como
+constancia-<nombre>-le-habian-ensenado-a-pensar.pdf.
+El mensaje final indica el nombre del archivo que debés buscar en Descargas.
+

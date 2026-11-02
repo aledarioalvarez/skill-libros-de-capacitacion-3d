@@ -2,7 +2,7 @@
 
 Skill para transformar PDF o texto fuente en libros de capacitación con escenas pop-up 3D: gráficos con volumen que emergen de las páginas y animaciones que ayudan a comprender.
 
-**Versión 0.5.0 · Español · HTML autocontenido · Actividades y evaluación**
+**Versión 0.5.1 · Español · HTML autocontenido · Actividades y evaluación**
 
 ## Qué hace
 
@@ -74,6 +74,8 @@ Consultá su [guía](examples/pensar-popup/guia-facilitador.html) y el [registro
 ## Cierre y constancia
 
 En el ejemplo, se necesitan al menos 3 respuestas correctas de 4 y una reflexión final escrita. Al pulsar **Finalizar recorrido**, aparece un sello breve (estático con movimiento reducido). El participante ingresa su nombre y descarga una **Constancia de finalización** con título, fecha y resultado. No hay envío de datos ni certificación institucional. Cambiar respuestas o reflexión invalida la finalización guardada; los PDF ya descargados no pueden revocarse.
+
+Antes de descargar, el libro muestra el nombre que llevará la constancia. El archivo se identifica como `constancia-<nombre>-le-habian-ensenado-a-pensar.pdf`, y el mensaje final indica qué archivo buscar en Descargas. Los PDF de prueba no se incluyen como constancias del participante.
 
 El PDF se genera dentro del HTML con pdf-lib incorporado. Se verificaron los criterios y el flujo con un entorno simulado, y se inspeccionaron PDF renderizados. La animación y la descarga en navegador real siguen pendientes de comprobación. Ver [cierre-y-constancia.md](references/cierre-y-constancia.md) para aplicar el estándar a otros cursos.
 
