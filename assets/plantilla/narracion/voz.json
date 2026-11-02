@@ -1,0 +1,7 @@
+{
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "Charon",
+  "idioma": "es-CL",
+  "estilo": "Native Chilean Spanish speaker from Santiago, natural and unmistakable Chilean accent and intonation (soft aspirated final s, Chilean melody), warm, close and professional university teacher; calm unhurried pace, never commercial or theatrical.",
+  "modeloVerificacion": "gemini-3.8-flash"
+}

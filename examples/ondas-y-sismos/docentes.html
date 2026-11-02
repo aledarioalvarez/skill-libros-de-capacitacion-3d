@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notas docentes · Ondas y sismos</title>
+<meta name="description" content="Guía docente del libro 3D Ondas y sismos, Física 1.° medio (OA 13).">
+<style>
+  :root { --ink: #1f2430; --ink2: #5a5f6b; --paper: #f8f4ea; --accent: #9a3b2a; --rule: #d9cfbd; --card: #fffdf7; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink: #ece6da; --ink2: #b9b2a5; --paper: #1d1a17; --accent: #e58a6f; --rule: #3d3832; --card: #26221e; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 Georgia, 'Source Serif 4', serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 32px 16px 80px; }
+  h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.1; margin: 6px 0 4px; }
+  h2 { font-size: 24px; margin: 38px 0 10px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+  h3 { font-size: 18.5px; margin: 20px 0 6px; }
+  .kicker { text-transform: uppercase; letter-spacing: .14em; font-size: 13px; color: var(--accent); font-weight: 700; }
+  .lead { color: var(--ink2); font-style: italic; }
+  table { width: 100%; border-collapse: collapse; font-size: 15.5px; margin: 8px 0 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 7px 8px; border-bottom: 1px solid var(--rule); }
+  th { font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink2); border-bottom: 2px solid var(--ink); }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 18px; margin: 12px 0; }
+  .fix { border-left: 4px solid var(--accent); }
+  code { font-size: 14px; background: var(--card); padding: 1px 5px; border-radius: 4px; border: 1px solid var(--rule); }
+  a { color: var(--accent); }
+  .wrap { overflow-x: auto; }
+  .back { display: inline-block; margin-bottom: 14px; font-size: 15px; }
+  @media print { .back { display: none; } body { background: #fff; color: #000; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="index.html">← Volver al libro</a>
+  <div class="kicker">Notas para docentes</div>
+  <h1>Ondas y sismos: un libro de física en 3D</h1>
+  <p class="lead">Física 1.° medio · Unidad 3: ¿De qué forma se relacionan las ondas con los sismos? · Adaptación interactiva: Dr. Cristian Sepúlveda-Irribarra (Universidad de Los Lagos).</p>
+
+  <h2>1. Propósito y currículum</h2>
+  <p>El libro cubre el <b>OA 13</b> de Ciencias Naturales 1.° medio (eje Física): explicar, con el modelo ondulatorio, el origen y la propagación de la energía liberada en un sismo; los tipos de ondas sísmicas (P, S y superficiales); su medición y registro (sismógrafo, escalas de magnitud e intensidad); sus consecuencias (tsunamis, efectos en la sociedad) y su importancia para conocer el interior de la Tierra. Sigue la secuencia de las lecciones 5 y 6 del Texto del Estudiante (págs. 58–77).</p>
+  <p>Cada pliego sigue el ciclo <b>Predice → Prueba → Desafío</b> (predecir, observar y explicar): el estudiante compromete una predicción antes de ver la respuesta, la contrasta con el modelo 3D y la aplica en un desafío que entrega un sello.</p>
+
+  <h2>2. Mapa del libro</h2>
+  <div class="wrap"><table>
+    <tr><th>Pliego</th><th>Objetivo</th><th>Interacción 3D</th><th>Desafío (sello)</th></tr>
+    <tr><td>1 · ¿Qué es un sismo?</td><td>Explicar el sismo como liberación de energía elástica acumulada entre placas; distinguir hipocentro, epicentro y área de ruptura.</td><td>Corte de la subducción Nazca–Sudamericana; resorte que acumula tensión; ruptura con frentes de onda P y S.</td><td>Tocar el epicentro sobre el hipocentro.</td></tr>
+    <tr><td>2 · Ondas P, S, Love y Rayleigh</td><td>Describir el movimiento de las partículas en cada tipo de onda y relacionarlo con su rapidez.</td><td>Red de partículas animada; partícula testigo con estela; modo medio líquido.</td><td>Identificar 3 ondas “misteriosas” seguidas.</td></tr>
+    <tr><td>3 · Interior de la Tierra</td><td>Explicar cómo la refracción y las zonas de sombra revelan las capas; comparar modelos estático y dinámico.</td><td>Trayectorias P y S calculadas con la ley de Snell; Tierra real vs. homogénea; zonas de sombra.</td><td>Inferir que el núcleo externo es líquido.</td></tr>
+    <tr><td>4 · Sismógrafo</td><td>Explicar el sismógrafo por inercia y leer un sismograma.</td><td>Sismógrafo de tambor + sismograma en papel con cuadrícula de 1 s.</td><td>Calcular la distancia de un sismo misterioso con t<sub>S</sub> − t<sub>P</sub>.</td></tr>
+    <tr><td>5 · Triangulación</td><td>Localizar un epicentro con tres estaciones.</td><td>Mapa de Chile central (La Serena, Santiago, Concepción) con círculos ajustables.</td><td>Ubicar el epicentro a menos de 60 km.</td></tr>
+    <tr><td>6 · Magnitud</td><td>Comprender el carácter logarítmico de la magnitud (energía ×32 por grado).</td><td>Cubos de energía con volumen proporcional; sismos chilenos históricos.</td><td>Valdivia 1960 vs. Maule 2010 (≈ 11 veces).</td></tr>
+    <tr><td>7 · Intensidad</td><td>Distinguir magnitud de intensidad; factores que la modifican.</td><td>Cuatro lugares con distinta distancia, suelo y construcción; escala de Mercalli.</td><td>Lograr que el lugar más lejano sienta más (suelo blando).</td></tr>
+    <tr><td>8 · Tsunamis</td><td>Explicar la propagación del tsunami (v = √(g·h)) y conductas de autocuidado.</td><td>Corte del mar con ola que se frena y crece; elección de ruta de evacuación.</td><td>Llegar a la cota 30 m antes de la ola.</td></tr>
+    <tr><td>Síntesis · ¿Cómo voy?</td><td>Evaluación formativa de la unidad.</td><td>8 preguntas con retroalimentación inmediata.</td><td>Puntaje y conteo de sellos.</td></tr>
+  </table></div>
+
+  <h2>3. Secuencia sugerida (≈ 6 horas pedagógicas)</h2>
+  <ol>
+    <li><b>Sesión 1 (L5):</b> actividad “Para comenzar” del texto (elástico enrollado) → pliegos 1 y 2. Cierre: ¿por qué las P llegan antes?</li>
+    <li><b>Sesión 2 (L5):</b> pliego 3 + actividad del texto (modelo estático y dinámico). Investigación paso a paso con resortes slinky (pág. 67) para contrastar ondas longitudinales y transversales.</li>
+    <li><b>Sesión 3 (L6):</b> actividad de las cajitas (pág. 68) → pliegos 4 y 5. CeluLab con un acelerómetro del celular (por ejemplo, la app gratuita phyphox).</li>
+    <li><b>Sesión 4 (L6):</b> pliegos 6 y 7; discusión de la pregunta del texto: “¿por qué un mismo sismo puede tener magnitud 6 e intensidad X?”.</li>
+    <li><b>Sesión 5 (L6):</b> pliego 8 + modelación del sismógrafo casero (pág. 74) + actividad de efectos en la sociedad.</li>
+    <li><b>Sesión 6:</b> síntesis “¿Cómo voy?” y la pregunta de cierre de la unidad.</li>
+  </ol>
+  <div class="card"><b>Modalidades.</b> Proyectado en la sala (el docente maneja el libro y el curso predice a mano alzada), en el laboratorio de computación (cada estudiante a su ritmo) o como tarea. En teléfonos funciona, pero se lee mejor en tablet o computador; el botón del libro abierto en la cápsula acerca la página izquierda para leer.</div>
+
+  <h2>4. Precisiones conceptuales (y diferencias con el texto)</h2>
+  <p>El libro corrige o matiza algunas simplificaciones frecuentes. Conviene comentarlas si el curso usa el texto impreso:</p>
+  <div class="card fix"><b>Orden de llegada de las ondas superficiales.</b> El texto indica que las ondas Love son “las últimas en ser detectadas”. En realidad las ondas Love suelen llegar <b>antes</b> que las Rayleigh (Love ≈ un poco más lentas que S; Rayleigh ≈ 0,9 de la rapidez S). Orden habitual: P, S, Love, Rayleigh.</div>
+  <div class="card fix"><b>¿Por qué las S son más lentas?</b> No es solo “por ser transversales”: la rapidez depende de cuánto resiste el material cada tipo de deformación. Las rocas resisten más la compresión (P) que el corte (S). Un líquido no resiste el corte: por eso las S no lo cruzan.</div>
+  <div class="card fix"><b>Magnitud: “más de 1000 veces”.</b> Dos grados de diferencia equivalen a ≈ 1000 veces más <b>energía</b> (≈ 32 por grado) y a 100 veces más <b>amplitud</b> en el sismograma (10 por grado). Es útil distinguir ambas ideas.</div>
+  <div class="card fix"><b>ONEMI → SENAPRED.</b> Desde 2023, la ONEMI fue reemplazada por el Servicio Nacional de Prevención y Respuesta ante Desastres (SENAPRED). Las alertas de tsunami las emite el SHOA (Armada de Chile).</div>
+  <div class="card fix"><b>Ondas superficiales “se originan en el epicentro”.</b> Es una simplificación aceptable: se forman cuando las ondas internas llegan a la superficie, y son más intensas cerca del epicentro.</div>
+
+  <h3>Ideas previas frecuentes</h3>
+  <ul>
+    <li>“La onda lleva la roca de un lugar a otro” → la onda transporta energía, no materia (pliego 2, partícula testigo).</li>
+    <li>“Magnitud 8 es el doble de 4” → escala logarítmica (pliego 6).</li>
+    <li>“Magnitud e intensidad son lo mismo” → una magnitud, muchas intensidades (pliego 7).</li>
+    <li>“El tsunami es una ola gigante en alta mar” → en alta mar mide ≈ 1 m, pero es muy rápido (pliego 8).</li>
+    <li>“El epicentro está bajo tierra” → el hipocentro está en profundidad; el epicentro, en la superficie (pliego 1).</li>
+  </ul>
+
+  <h2>5. Sobre los modelos</h2>
+  <ul>
+    <li><b>Trayectorias sísmicas (pliego 3):</b> se trazan con la ecuación del rayo y la ley de Snell en un modelo de rapidez por capas simplificado (inspirado en el modelo PREM). Reproduce zonas de sombra de ≈ 103°–142° (P) y desde ≈ 104° (S), cercanas a los valores reales (≈ 104°–140°).</li>
+    <li><b>Sismogramas (pliego 4):</b> señales sintéticas con P ≈ 6 km/s, S ≈ 3,5 km/s y superficiales ≈ 3,1 km/s; la regla d ≈ 8 × (t<sub>S</sub> − t<sub>P</sub>) tiene un error cercano al 5 %.</li>
+    <li><b>Energía (pliego 6):</b> log<sub>10</sub>E = 1,5 M + 4,8 (E en joules), relación de Gutenberg–Richter.</li>
+    <li><b>Intensidad (pliego 7):</b> fórmula <b>didáctica</b> (no oficial) que combina magnitud, distancia hipocentral y suelo; sirve para comparar, no para predecir intensidades reales.</li>
+    <li><b>Tsunami (pliego 8):</b> v = √(g·h) y crecimiento según la ley de Green (altura ∝ h<sup>−1/4</sup>). Las distancias en tierra están comprimidas y las alturas exageradas.</li>
+  </ul>
+
+  <h2>6. Uso técnico</h2>
+  <ul>
+    <li>El libro es un único archivo <code>index.html</code>: se abre con doble clic, sin internet ni instalación. Requiere un navegador con WebGL 2 (Chrome, Edge, Firefox o Safari recientes).</li>
+    <li><b>Moodle:</b> súbelo como recurso “Archivo” o dentro de una carpeta junto a este documento (<code>docentes.html</code>).</li>
+    <li><b>Enlaces directos:</b> agrega <code>#p3</code> al final de la dirección para abrir directamente el pliego 3 (de <code>#p0</code> a <code>#p9</code>).</li>
+    <li><b>Narración:</b> cada pliego tiene una narración de 20 a 40 segundos (botón «Escuchar» en la página izquierda). El botón de audífonos de la cápsula activa la narración automática al cambiar de página, útil para proyectar. Voz generada con Gemini TTS (voz Charon, dirección de español de Chile); cada audio se verificó transcribiéndolo y comparándolo con su guion. La narración invita a experimentar y un <b>cursor guía</b> muestra dónde hacer clic: llega a cada botón justo cuando la voz lo nombra y simula el gesto (clic, mantener presionado o arrastrar una barra) sin ejecutar la acción, para que sea el estudiante quien la haga. Si se pausa la narración, el cursor también se detiene.</li>
+    <li>El progreso (sellos, predicciones, respuestas) se guarda solo en el navegador del estudiante; puede borrarse desde el índice.</li>
+    <li>Accesibilidad: todo el texto es HTML real (legible por lectores de pantalla), navegación con flechas del teclado, respeto de “reducir movimiento” y sonido que se puede silenciar.</li>
+  </ul>
+
+  <h2>7. Fuentes</h2>
+  <ul>
+    <li>Mineduc. Bases Curriculares de Ciencias Naturales 7.° básico a 2.° medio, OA 13 de 1.° medio. <a href="https://www.curriculumnacional.cl/">curriculumnacional.cl</a></li>
+    <li>Mineduc. Texto del Estudiante Física 1.° medio, Unidad 3 (lecciones 5 y 6).</li>
+    <li>Centro Sismológico Nacional, Universidad de Chile. <a href="https://www.csn.uchile.cl/">csn.uchile.cl</a></li>
+    <li>SENAPRED: Servicio Nacional de Prevención y Respuesta ante Desastres. <a href="https://senapred.cl/">senapred.cl</a></li>
+    <li>SHOA: Servicio Hidrográfico y Oceanográfico de la Armada (Sistema Nacional de Alarma de Maremotos). <a href="https://www.shoa.cl/">shoa.cl</a></li>
+    <li>USGS Earthquake Hazards Program: magnitud, energía e intensidad. <a href="https://www.usgs.gov/programs/earthquake-hazards">usgs.gov</a></li>
+    <li>Dziewonski, A. M. y Anderson, D. L. (1981). Preliminary reference Earth model (PREM). <i>Physics of the Earth and Planetary Interiors</i>, 25(4), 297–356.</li>
+    <li>Instituto Nacional de Normalización. NCh433: Diseño sísmico de edificios.</li>
+  </ul>
+</main>
+</body>
+</html>

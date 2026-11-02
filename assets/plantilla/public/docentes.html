@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notas docentes · {{TÍTULO}}</title>
+<meta name="description" content="Guía docente del libro 3D {{TÍTULO}}, {{ASIGNATURA Y NIVEL}} ({{OA}}).">
+<style>
+  :root { --ink: #1f2430; --ink2: #5a5f6b; --paper: #f8f4ea; --accent: #9a3b2a; --rule: #d9cfbd; --card: #fffdf7; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink: #ece6da; --ink2: #b9b2a5; --paper: #1d1a17; --accent: #e58a6f; --rule: #3d3832; --card: #26221e; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 Georgia, 'Source Serif 4', serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 32px 16px 80px; }
+  h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.1; margin: 6px 0 4px; }
+  h2 { font-size: 24px; margin: 38px 0 10px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+  h3 { font-size: 18.5px; margin: 20px 0 6px; }
+  .kicker { text-transform: uppercase; letter-spacing: .14em; font-size: 13px; color: var(--accent); font-weight: 700; }
+  .lead { color: var(--ink2); font-style: italic; }
+  table { width: 100%; border-collapse: collapse; font-size: 15.5px; margin: 8px 0 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 7px 8px; border-bottom: 1px solid var(--rule); }
+  th { font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink2); border-bottom: 2px solid var(--ink); }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 18px; margin: 12px 0; }
+  .fix { border-left: 4px solid var(--accent); }
+  code { font-size: 14px; background: var(--card); padding: 1px 5px; border-radius: 4px; border: 1px solid var(--rule); }
+  a { color: var(--accent); }
+  .wrap { overflow-x: auto; }
+  .back { display: inline-block; margin-bottom: 14px; font-size: 15px; }
+  @media print { .back { display: none; } body { background: #fff; color: #000; } }
+</style>
+</head>
+<body>
+<main>
+  <!-- PLANTILLA: reemplaza cada {{…}} y borra los comentarios. Modelo completo: examples/ondas-y-sismos/docentes.html de la skill. -->
+  <a class="back" href="index.html">← Volver al libro</a>
+  <div class="kicker">Notas para docentes</div>
+  <h1>{{TÍTULO}}: un libro de {{ASIGNATURA}} en 3D</h1>
+  <p class="lead">{{Asignatura · nivel}} · {{Unidad: pregunta}} · Adaptación interactiva: {{AUTOR}} ({{INSTITUCIÓN}}).</p>
+
+  <h2>1. Propósito y currículum</h2>
+  <p>{{Objetivo(s) de aprendizaje cubiertos, con su código (OA) y redacción resumida; páginas del texto escolar que sigue.}}</p>
+  <p>Cada pliego sigue el ciclo <b>Predice → Prueba → Desafío</b> (predecir, observar y explicar): el estudiante compromete una predicción antes de ver la respuesta, la contrasta con el modelo 3D y la aplica en un desafío que entrega un sello.</p>
+
+  <h2>2. Mapa del libro</h2>
+  <div class="wrap"><table>
+    <tr><th>Pliego</th><th>Objetivo</th><th>Interacción 3D</th><th>Desafío (sello)</th></tr>
+    <!-- una fila por pliego -->
+    <tr><td>{{1 · título}}</td><td>{{qué aprende}}</td><td>{{qué se manipula}}</td><td>{{qué demuestra}}</td></tr>
+    <tr><td>Síntesis · ¿Cómo voy?</td><td>Evaluación formativa de la unidad.</td><td>Preguntas con retroalimentación inmediata.</td><td>Puntaje y conteo de sellos.</td></tr>
+  </table></div>
+
+  <h2>3. Secuencia sugerida</h2>
+  <ol>
+    <li>{{Sesión 1: actividad del texto + pliegos …}}</li>
+  </ol>
+  <div class="card"><b>Modalidades.</b> Proyectado en la sala (el docente maneja el libro y el curso predice a mano alzada), en el laboratorio de computación (cada estudiante a su ritmo) o como tarea. En teléfonos funciona, pero se lee mejor en tablet o computador; el botón del libro abierto en la cápsula acerca la página izquierda para leer.</div>
+
+  <h2>4. Precisiones conceptuales (y diferencias con el texto)</h2>
+  <!-- una tarjeta por simplificación o error del texto escolar que el libro corrige o matiza -->
+  <div class="card fix"><b>{{Tema}}.</b> {{Qué dice el texto, qué es más preciso y por qué.}}</div>
+  <h3>Ideas previas frecuentes</h3>
+  <ul>
+    <li>{{“Idea previa” → cómo la aborda el libro (pliego N).}}</li>
+  </ul>
+
+  <h2>5. Sobre los modelos</h2>
+  <ul>
+    <li>{{Qué simula cada modelo, con qué ecuación o datos, y qué simplifica (escalas comprimidas, exageraciones, fórmulas didácticas).}}</li>
+  </ul>
+
+  <h2>6. Uso técnico</h2>
+  <ul>
+    <li>El libro es un único archivo <code>index.html</code>: se abre con doble clic, sin internet ni instalación. Requiere un navegador con WebGL 2 (Chrome, Edge, Firefox o Safari recientes).</li>
+    <li><b>Hosting:</b> sube <code>index.html</code> y <code>docentes.html</code> a la misma carpeta. <b>Moodle:</b> súbelos como recurso “Archivo” o dentro de una carpeta.</li>
+    <li><b>Enlaces directos:</b> agrega <code>#p3</code> al final de la dirección para abrir directamente el pliego 3.</li>
+    <li><b>Narración:</b> cada pliego tiene una narración (botón «Escuchar»); suena sola al abrir el libro y al pasar de página, y se apaga con el botón de audífonos. Un <b>cursor guía</b> muestra dónde hacer clic: llega a cada botón justo cuando la voz lo nombra y simula el gesto sin ejecutar la acción, para que sea el estudiante quien la haga. Voz generada con Gemini TTS y verificada transcribiéndola.</li>
+    <li>El progreso (sellos, predicciones, respuestas) se guarda solo en el navegador del estudiante; puede borrarse desde el índice.</li>
+    <li>Accesibilidad: todo el texto es HTML real (legible por lectores de pantalla), navegación con flechas del teclado, respeto de “reducir movimiento” y sonido que se puede silenciar.</li>
+  </ul>
+
+  <h2>7. Fuentes</h2>
+  <ul>
+    <li>Mineduc. Bases Curriculares de {{asignatura}}, {{OA}}. <a href="https://www.curriculumnacional.cl/">curriculumnacional.cl</a></li>
+    <li>{{Texto del estudiante y fuentes disciplinares verificables (instituciones, artículos, normas).}}</li>
+  </ul>
+</main>
+</body>
+</html>

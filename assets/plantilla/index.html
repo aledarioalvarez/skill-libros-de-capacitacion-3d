@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>%TITULO% · %SUBTITULO%</title>
+<meta name="description" content="%DESCRIPCION%" />
+<meta name="theme-color" content="#2a211d" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237a2f2a'/%3E%3Cpath d='M3 17h6l2-5 3 10 3-14 3 12 2-6 2 3h5' fill='none' stroke='%23e2c27a' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<style>
+  /* lo mínimo para el primer pintado: el cargador */
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #c9bda9; }
+  #loader { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: radial-gradient(120% 90% at 50% 40%, #3a2c25 0%, #1d1512 70%); color: #e9dcc4; font: 500 15px/1.4 Georgia, serif; transition: opacity .6s ease, visibility 0s .6s; }
+  #loader.done { opacity: 0; visibility: hidden; }
+  #loader .t { font-size: 28px; letter-spacing: .02em; }
+  #loader svg { width: 220px; height: 40px; display: block; margin: 14px auto; }
+  #loader path { stroke: #e2c27a; stroke-width: 2; fill: none; stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 1.6s ease-in-out infinite; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+</style>
+</head>
+<body>
+<div id="loader" role="status"><div style="text-align:center"><div class="t">%TITULO%</div><svg viewBox="0 0 220 40"><path d="M0 20h40l6-6 6 12 6-10 6 8 8-20 8 30 8-26 8 22 6-12 6 4h96"/></svg><div>Abriendo el libro…</div></div></div>
+<div id="app"></div>
+<div id="ui"></div>
+<div id="a11yLive" class="sr" aria-live="polite" aria-atomic="true"></div>
+<div id="nogl" role="alert"><div><h1>Este libro necesita WebGL</h1><p>Tu navegador no pudo iniciar los gráficos 3D. Prueba con una versión reciente de Chrome, Edge, Firefox o Safari, o activa la aceleración por hardware. Las <a href="docentes.html">notas para docentes</a> funcionan sin 3D.</p></div></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;background:#fff;text-align:center">Este libro necesita JavaScript.</p></noscript>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

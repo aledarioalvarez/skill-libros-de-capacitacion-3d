@@ -1,0 +1,62 @@
+[
+  {
+    "id": "portada",
+    "dur": "31.1",
+    "sim": "100%",
+    "tr": "Hola, bienvenidos a Ondas y Sismos, un libro de física en tres dimensiones para primero medio. En Chile vivimos con los temblores, así que vale la pena entenderlos bien. Este libro no es solo para leer, es para tocar. En cada pliego vas a marcar una predicción, vas a hacer clic en los botones bajo el dibujo para experimentar y vas a resolver un desafío para ganar un sello. Puedes girar el libro arrastrándolo con el mouse. ¿Partimos? Haz clic en ¿Qué es un sismo? en el índice."
+  },
+  {
+    "id": "sismo",
+    "dur": "38.9",
+    "sim": "100%",
+    "tr": "Un sismo es una vibración de la corteza terrestre. En Chile, la mayoría nace donde la placa de Nazca se mete bajo la placa sudamericana. Las placas quedan trabadas y la roca se deforma como un elástico que se estira, acumulando energía elástica. Antes de seguir, marca tu predicción en el recuadro predice. Ahora experimenta. Mantén presionado el botón acumular tensión y mira cómo se comprime el resorte. Cuando la barra esté llena, haz clic en liberar. Vas a ver nacer las ondas en el hipocentro. Tu desafío: toca en la superficie del dibujo el punto que está justo encima. Ese es el epicentro."
+  },
+  {
+    "id": "ondas",
+    "dur": "41.4",
+    "sim": "100%",
+    "tr": "La energía del sismo viaja en forma de ondas y la onda transporta energía, no materia. Mira el punto rojo. Es una sola partícula del suelo y solo vibra en torno a su lugar. Ahora prueba tú. Haz clic en onda P y fíjate. La partícula va y viene en la misma dirección en que avanza la onda. Después haz clic en onda S. Ahora se mueve de lado. Solo prueba también Love y Rayleigh y observa cómo se mueven las casitas. Un dato curioso. Haz clic en medio sólido para cambiarlo a líquido y elige la onda S. ¿Qué pasa? Cuando te sientas listo pulsa onda misteriosa y adivina tres seguidas."
+  },
+  {
+    "id": "interior",
+    "dur": "43.9",
+    "sim": "98%",
+    "tr": "Nadie ha perforado más de 13 km. Entonces, ¿cómo sabemos qué hay adentro de la Tierra? Gracias a las ondas sísmicas, que se desvían al pasar de una capa a otra. Primero, marca tu predicción. Luego, haz clic en «Lanzar sismo» y sigue las ondas. Las azules son P y las naranjas son S. Fíjate dónde se detienen las ondas S y mira el borde de la Tierra: aparecen zonas de sombra. Ahora haz clic en «Tierra real» para cambiarla a una Tierra homogénea y lanza otro sismo. ¿Ves la diferencia? También puedes pulsar «Modelo estático» para ver las capas del modelo dinámico. Al final, responde el desafío: ¿qué nos dice que las ondas S no crucen el núcleo externo?"
+  },
+  {
+    "id": "sismografo",
+    "dur": "41.9",
+    "sim": "99%",
+    "tr": "Un sismógrafo tiene una masa pesada que, por inercia, tiende a quedarse quieta mientras el suelo se mueve. La pluma dibuja esa diferencia: el sismograma. Haz clic en Registrar sismo y mira la masa. Casi no se mueve, mientras todo lo demás tiembla. Abajo, en el papel, aparecen primero las ondas P, luego las S y al final las superficiales. Ahora mueve la barra Distancia al epicentro y registra otro sismo. ¿Qué pasa con el tiempo entre P y S? Para el desafío, pulsa Sismo misterioso. Cuenta los segundos entre la llegada P y la S, multiplícalos por 8 y escribe la distancia en kilómetros."
+  },
+  {
+    "id": "triangulacion",
+    "dur": "33.0",
+    "sim": "100%",
+    "tr": "Una sola estación sabe a qué distancia ocurrió el sismo, pero no en qué dirección. Con tres estaciones, en cambio, podemos encontrar el epicentro. Eso se llama triangulación. Vamos a hacerlo. Haz clic en nuevo sismo y lee junto a cada ciudad la diferencia entre la onda S y la onda P. Multiplica cada tiempo por ocho y mueve la barra del radio de esa ciudad hasta ese valor. Vas a ver aparecer un círculo. Cuando tengas los tres, toca en el mapa el punto donde se cruzan. Si te pierdes, el botón Ayuda dibuja los círculos por ti."
+  },
+  {
+    "id": "magnitud",
+    "dur": "38.9",
+    "sim": "97%",
+    "tr": "La magnitud mide la energía que libera un sismo en su origen y su escala es logarítmica. Cada grado más significa unas 32 veces más energía. Compruébalo tú. En el dibujo, el volumen de cada cubo representa la energía de un sismo. Mueve la barra sismo B hacia abajo de a un grado y mira cuánto se achica el cubo. Haz clic en los botones con nombres de terremotos chilenos como Valdivia 1960 o Maule 2010 para compararlos, y prueba el botón sismo que apenas se siente. El cubo casi desaparece. Después, resuelve el desafío. ¿Cuántas veces más energía liberó Valdivia que el Maule?"
+  },
+  {
+    "id": "intensidad",
+    "dur": "38.6",
+    "sim": "98%",
+    "tr": "Un sismo tiene una sola magnitud, pero muchas intensidades. La intensidad mide los efectos en cada lugar con la escala de Mercalli, del 1 al 12. Experimenta: elige una magnitud con la barra y haz clic en Sismo. Mira el número romano sobre cada construcción. ¿Los lugares cercanos sienten más? Ahora activa el suelo blando bajo una casa con los botones A, B, C o D y repite el sismo. ¿Qué cambió? Tu desafío: logra que la casa D, la más lejana, sienta más que el edificio C. Piensa en qué, además de la distancia, cambia la intensidad."
+  },
+  {
+    "id": "tsunami",
+    "dur": "38.9",
+    "sim": "95%",
+    "tr": "Cuando el fondo del mar se levanta de golpe por un sismo, empuja toda la columna de agua y se forma un tsunami. En alta mar casi no se nota, pero viaja a unos 700 km/h. Al llegar a la costa, se frena y crece. Vamos a practicar qué hacer. Haz clic en Sismo en la fosa. Imagina que estás en la playa y el sismo es tan fuerte que te cuesta mantenerte en pie. No esperes la alarma, elige rápido a dónde ir con los botones de abajo y mira lo que pasa cuando llega el agua. Recuerda: camina a una zona alta, sobre 30 m, no uses el auto y no bajes hasta que las autoridades levanten la alerta."
+  },
+  {
+    "id": "quiz",
+    "dur": "29.0",
+    "sim": "100%",
+    "tr": "Llegamos al final. Ahora te toca a ti. Haz clic en la respuesta que elijas en cada una de las ocho preguntas. Si te equivocas, aparece una pista que te explica por qué. Abajo vas a ver tu puntaje y cuántos sellos ganaste. Si te falta alguno, vuelve a ese pliego con el índice e inténtalo de nuevo. Y para cerrar, escribe en tu cuaderno: ¿De qué forma se relacionan las ondas con los sismos? ¡Mucho éxito!"
+  }
+]
