@@ -6,10 +6,7 @@ Contenido: 1. Qué hace en el libro · 2. Escribir los guiones · 3. La clave de
 ## 1. Qué hace en el libro
 
 - Cada pliego con `src/audio/<id>.mp3` muestra el botón **▶ Escuchar** en la página izquierda.
-- La narración automática viene **activada por defecto**: suena al abrir el libro y al pasar de
-  página. El botón de audífonos de la cápsula la apaga o la enciende (se recuerda por navegador).
-- Si el navegador bloquea el audio (enlace directo sin interacción previa), aparece
-  «Toca la pantalla para escuchar la narración» y el audio parte con el primer toque.
+- Mantener la narración desactivada al abrir y al cambiar de capítulo. Reproducir solo por una acción explícita del lector; adaptar la plantilla si fuera necesario.
 - El **cursor guía** (`src/core/cursor.js`) sigue el reloj del audio: viaja hasta cada botón
   y llega cuando la voz lo nombra. Solo **simula** el gesto (el botón se hunde, aparece una
   onda); la acción real la hace el estudiante. Si se pausa la voz, el cursor espera; al cambiar
@@ -20,13 +17,13 @@ Contenido: 1. Qué hace en el libro · 2. Escribir los guiones · 3. La clave de
 
 ```json
 {
-  "id": "sismo",
-  "emocion": "calm and explanatory, slightly intrigued when describing the rupture",
+  "id": "proceso",
+  "emocion": "calm and explanatory, clear when explaining each step",
   "cta": "[data-act=\"charge\"]",
-  "texto": "… Ahora experimenta: mantén presionado el botón «Acumular tensión» … haz clic en «¡Liberar!». …",
+  "texto": "… Ahora experimenta: mantén presionado el botón «Preparar» … haz clic en «Avanzar». …",
   "cues": [
-    { "frase": "mantén presionado el botón «Acumular tensión»", "target": "[data-act=\"charge\"]", "accion": "press" },
-    { "frase": "haz clic en «¡Liberar!»", "target": "[data-act=\"release\"]", "accion": "click" }
+    { "frase": "mantén presionado el botón «Preparar»", "target": "[data-act=\"charge\"]", "accion": "press" },
+    { "frase": "haz clic en «Avanzar»", "target": "[data-act=\"release\"]", "accion": "click" }
   ]
 }
 ```
@@ -45,7 +42,7 @@ Cómo escribirlos:
   rango a la derecha / izquierda), `point` (señalar con un círculo: predicción, desafío, campos).
 - Revisa que cada etiqueta nombrada exista tal cual en el HTML del pliego.
 
-El ejemplo completo está en `examples/ondas-y-sismos/narracion/guiones.json`.
+Adaptar el ejemplo de guion a los controles reales del capítulo.
 
 ## 3. La clave de Gemini
 
@@ -53,7 +50,7 @@ El ejemplo completo está en `examples/ondas-y-sismos/narracion/guiones.json`.
 - Las herramientas aceptan `GEMINI_API_KEY=…`, `GOOGLE_API_KEY=…` o una línea anotada a mano
   como `API KEY - GEMINI …: clave`, y **nunca la imprimen**.
 - No inspecciones el `.env` con `cat`, `grep`, `sed` ni similares: una línea con formato
-  inesperado se imprime entera y la clave queda en la conversación (pasó una vez). Si
+  inesperado se imprime entera y la clave queda en la conversación. Si
   necesitas saber si existe, deja que `tts.mjs` lo diga ("No hay GEMINI_API_KEY en …").
 - Leer credenciales de otro proyecto requiere permiso explícito del usuario.
 
@@ -61,11 +58,11 @@ El ejemplo completo está en `examples/ondas-y-sismos/narracion/guiones.json`.
 
 ```bash
 node tools/tts.mjs --env "RUTA\.env"                 # genera lo que falte y verifica todo
-node tools/tts.mjs --env "RUTA\.env" --only sismo --force   # rehace un audio
+node tools/tts.mjs --env "RUTA\.env" --only proceso --force   # rehace un audio
 node tools/tts.mjs --env "RUTA\.env" --verify-only   # solo vuelve a transcribir y comparar
 ```
 
-- Voz y estilo salen de `narracion/voz.json` (por defecto Charon, `es-CL`, dirección chilena).
+- Voz y estilo salen de `narracion/voz.json` (adaptar voz, idioma y estilo al público del libro).
 - Cada audio se guarda en `narracion/wav/` y se convierte a MP3 mono 48 kb/s en `src/audio/`
   (≈ 0,2–0,3 MB por pliego; requiere `ffmpeg`).
 - Verificación: transcribe con `gemini-3.8-flash` y compara palabra a palabra con el guion.
@@ -88,7 +85,7 @@ posición esperada en el texto) y en ese caso usa una estimación, marcada "(est
 Comprueba al menos dos tramos: recórtalos y transcríbelos.
 
 ```bash
-ffmpeg -y -loglevel error -ss 22.0 -to 24.8 -i src/audio/sismo.mp3 tramo.mp3
+ffmpeg -y -loglevel error -ss 22.0 -to 24.8 -i src/audio/proceso.mp3 tramo.mp3
 ```
 
 Si cambias un guion, regenera su audio **y** sus tiempos (`--only id` en ambas herramientas)

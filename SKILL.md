@@ -63,9 +63,9 @@ Incluir evaluación final alineada a los objetivos, con preguntas de aplicación
 
 ## 3. Construir el libro
 
-Se incluyen una plantilla Three.js, referencias técnicas y un ejemplo bajo esta misma carpeta. Leer references/arquitectura.md y references/diseno-pliegos.md antes de usar el motor; consultar el ejemplo más próximo. Para construir un libro pop-up, consultar references/flujo-popup.md como manual técnico, subordinado a estas instrucciones. La narración sigue siendo opcional y se adapta al público.
+Se incluyen una plantilla Three.js y referencias técnicas bajo esta misma carpeta. Leer references/arquitectura.md y references/diseno-pliegos.md antes de usar el motor. Para construir un libro pop-up, consultar references/flujo-popup.md como manual técnico, subordinado a estas instrucciones. La narración sigue siendo opcional y se adapta al público.
 
-- Para libro pop-up o espacial, reutilizar assets/plantilla/ y scripts/nuevo-libro.mjs; localizar la raíz real de esta skill mediante el mecanismo de skills del entorno, nunca asumir ~/.claude. El script puede crear configuración .claude de vista previa; no es necesaria para ChatGPT.
+- Para libro pop-up o espacial, reutilizar assets/plantilla/ y scripts/nuevo-libro.mjs; localizar la raíz real de esta skill mediante el mecanismo de skills del entorno, nunca asumir ~/.claude. La vista previa se ejecuta desde la carpeta del proyecto con Vite.
 - Copiar la plantilla a un proyecto independiente. Crear src/audio si falta; personalizar src/libro.config.js, identificador de progreso único, capítulos en src/spreads/ y evaluación. Eliminar ejemplos y marcadores de plantilla del resultado.
 - Node y npm son necesarios para esa vía; instalar desde el lockfile y compilar con Vite. Revisar scripts antes de ejecutarlos. No incluir node_modules, claves ni archivos .env en la entrega.
 - Si Three.js o las dependencias no están disponibles, producir un libro HTML autocontenido con CSS y SVG/JavaScript nativo que mantenga las actividades y las animaciones pertinentes. Declarar la alternativa, sin presentarla como 3D. No bloquear un libro útil por una dependencia opcional.
@@ -91,4 +91,4 @@ Guardar los archivos finales mediante el flujo de Library cuando esté disponibl
 
 ## Licencias
 
-Conservar los avisos de licencia incluidos en LICENSE, LICENSE-original y assets/THREE-LICENSE.txt al reutilizar y distribuir código. Consultar THIRD_PARTY_NOTICES.md para ubicar los avisos aplicables.
+Conservar los avisos de licencia incluidos en LICENSE y assets/THREE-LICENSE.txt al reutilizar y distribuir código. Consultar THIRD_PARTY_NOTICES.md para ubicar los avisos aplicables.

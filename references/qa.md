@@ -2,7 +2,7 @@
 
 ## Vista previa
 
-- Desarrollo: `npx vite --port 5174` (o la configuración `libro` de `.claude/launch.json`).
+- Desarrollo: `npx vite --port 5174`.
 - Archivo final: `npx vite build` y luego `npx vite preview --port 4174`.
 - **Ojo**: la herramienta de vista previa puede seguir usando la carpeta donde arrancó la sesión
   (si la sesión se movió de carpeta, sirve la versión vieja). Si lo que ves no coincide con lo

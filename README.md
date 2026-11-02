@@ -40,7 +40,6 @@ El cliente debe admitir skills y acceso a archivos. Para producir los entregable
 | `assets/process3d-view.mjs` | Referencia de vista 3D para procesos de seis estaciones, adaptable al material |
 | `scripts/nuevo-libro.mjs` | Preparación de un proyecto desde la plantilla |
 | `references/` | Arquitectura, diseño pedagógico, animaciones, accesibilidad y pruebas |
-| `examples/` | Ejemplo técnico de un libro educativo |
 
 ## Requisitos
 

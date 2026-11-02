@@ -1,6 +1,6 @@
 // Crea un proyecto de libro 3D nuevo a partir de la plantilla de la skill.
 // Uso: node nuevo-libro.mjs "C:\ruta\al\proyecto" [--sin-instalar]
-// Copia la plantilla, instala dependencias (npm ci) y deja .claude/launch.json para la vista previa.
+// Copia la plantilla e instala dependencias (npm ci), salvo --sin-instalar.
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
@@ -18,14 +18,6 @@ if (fs.existsSync(dest) && fs.readdirSync(dest).some((f) => !f.startsWith('.')))
 fs.mkdirSync(dest, { recursive: true });
 fs.cpSync(plantilla, dest, { recursive: true });
 fs.mkdirSync(path.join(dest, 'src', 'audio'), { recursive: true });
-fs.mkdirSync(path.join(dest, '.claude'), { recursive: true });
-fs.writeFileSync(path.join(dest, '.claude', 'launch.json'), JSON.stringify({
-  version: '0.0.1',
-  configurations: [
-    { name: 'libro', runtimeExecutable: 'npx', runtimeArgs: ['vite', '--port', '5174', '--strictPort'], port: 5174 },
-    { name: 'libro-final', runtimeExecutable: 'npx', runtimeArgs: ['vite', 'preview', '--port', '4174', '--strictPort'], port: 4174 },
-  ],
-}, null, 2));
 console.log(`✔ Plantilla copiada en ${dest}`);
 if (!process.argv.includes('--sin-instalar')) {
   console.log('… instalando dependencias (npm ci)');

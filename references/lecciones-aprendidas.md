@@ -1,6 +1,6 @@
-# Lecciones aprendidas (ya corregidas en la plantilla)
+# Resolución de problemas de la plantilla
 
-Léelas si algo se comporta raro: casi todo ya pasó una vez.
+Consultar ante fallas de compilación, encuadre o interacción.
 
 | Síntoma | Causa | Solución (en la plantilla) |
 |---|---|---|
@@ -19,5 +19,4 @@ Léelas si algo se comporta raro: casi todo ya pasó una vez.
 | Un modelo de Gemini responde 404 | Modelo retirado o no disponible para esa clave | Listar modelos y ajustar `narracion/voz.json` |
 | La voz dijo una cifra distinta | Error ocasional del TTS | Verificación por transcripción + regenerar con `--only id --force` |
 | La clave de API apareció en la conversación | Se filtró un `.env` con `grep` y una línea con formato distinto no se ocultó | No inspeccionar `.env`; las herramientas leen la clave sin imprimirla |
-| `npm ci` avisa de "install-scripts" de esbuild | Política de npm del equipo | La compilación funciona igual; no hace falta aprobar nada |
 | La física del modelo no coincide con la realidad | Perfil de parámetros simplificado | Prototipar en Node y ajustar contra valores conocidos (p. ej. zonas de sombra 104°/140°) antes de dibujar |
