@@ -4,3 +4,13 @@ Incluyen los siete métodos: reproducción, pausa, reinicio, pasos, final; caíd
 
 LIMITACIÓN
 No se completó la prueba visual ni de interacciones en navegador real. Edge automatizado no pudo iniciarse y el navegador integrado rechazó el protocolo de archivos locales. Estas pruebas de lógica no acreditan renderizado WebGL, diseño móvil ni funcionamiento en un teléfono físico.
+
+CIERRE Y PDF — versión 0.5
+15 comprobaciones aprobadas de umbral 3/4, reflexión, evaluación comprobada,
+respuestas incompletas/incorrectas, finalización persistida, cambios que invalidan,
+fecha, nombres, rechazo de solicitudes sin requisitos, formato PDF A5 y metadatos.
+Flujo de controles probado con DOM simulado: finalizar, animación habilitada, nombre,
+descarga simulada, recarga sin repetir celebración, edición, movimiento reducido y borrado.
+PDF reales generados con el módulo final y renderizados con PDFium; revisión visual
+de nombre de ejemplo, nombre largo y Unicode con fuentes locales disponibles.
+No se completó una prueba en navegador real de la animación ni de la descarga.

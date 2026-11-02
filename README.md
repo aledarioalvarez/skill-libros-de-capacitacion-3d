@@ -2,7 +2,7 @@
 
 Skill para transformar PDF o texto fuente en libros de capacitación con escenas pop-up 3D: gráficos con volumen que emergen de las páginas y animaciones que ayudan a comprender.
 
-**Versión 0.4.0 · Español · HTML autocontenido · Actividades y evaluación**
+**Versión 0.5.0 · Español · HTML autocontenido · Actividades y evaluación**
 
 ## Qué hace
 
@@ -13,6 +13,7 @@ Skill para transformar PDF o texto fuente en libros de capacitación con escenas
 - Construye escenas 3D con reproducción, pausa, pasos, bifurcaciones y controles de cámara.
 - Ofrece alternativas 2D y texto cuando WebGL no está disponible.
 - Incluye ejercicios, retroalimentación y una guía para facilitar la capacitación.
+- Cierra con una celebración breve y una constancia PDF local, habilitada con criterios explícitos de finalización.
 - Verifica fidelidad, funcionamiento, legibilidad y adaptación a escritorio y móvil.
 
 ## Cómo usarla
@@ -66,9 +67,15 @@ Un libro `index.html`, una guía del facilitador y un paquete de descarga con lo
 
 ## Ejemplo de referencia
 
-[Le habían enseñado a pensar](examples/pensar-popup/index.html) incluye un libro abierto, edificio y barómetro volumétricos, siete demostraciones, alternativa 2D y evaluación. Para usarlo, descargá el repositorio completo y abrí ese archivo en un navegador compatible; la vista de código de GitHub no ejecuta el HTML.
+[Le habían enseñado a pensar](examples/pensar-popup/index.html) incluye un libro abierto, edificio y barómetro volumétricos, siete demostraciones, alternativa 2D, evaluación y cierre con constancia PDF. Para usarlo, descargá el repositorio completo y abrí ese archivo en un navegador compatible; la vista de código de GitHub no ejecuta el HTML.
 
 Consultá su [guía](examples/pensar-popup/guia-facilitador.html) y el [registro de verificación](examples/pensar-popup/verificacion.txt). El ejemplo fue aprobado por el usuario y pasó comprobaciones de lógica; la prueba visual automatizada quedó pendiente por limitaciones del entorno. Cada nuevo libro debe verificarse por separado. No es obligatorio repetir su tema, paleta ni cantidad de capítulos.
+
+## Cierre y constancia
+
+En el ejemplo, se necesitan al menos 3 respuestas correctas de 4 y una reflexión final escrita. Al pulsar **Finalizar recorrido**, aparece un sello breve (estático con movimiento reducido). El participante ingresa su nombre y descarga una **Constancia de finalización** con título, fecha y resultado. No hay envío de datos ni certificación institucional. Cambiar respuestas o reflexión invalida la finalización guardada; los PDF ya descargados no pueden revocarse.
+
+El PDF se genera dentro del HTML con pdf-lib incorporado. Se verificaron los criterios y el flujo con un entorno simulado, y se inspeccionaron PDF renderizados. La animación y la descarga en navegador real siguen pendientes de comprobación. Ver [cierre-y-constancia.md](references/cierre-y-constancia.md) para aplicar el estándar a otros cursos.
 
 ## Criterio pedagógico
 

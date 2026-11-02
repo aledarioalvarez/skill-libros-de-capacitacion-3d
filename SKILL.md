@@ -5,7 +5,7 @@ description: "Usar cuando el usuario adjunta o identifica un PDF o texto fuente 
 
 # Libros de Capacitación — animaciones 3D
 
-Versión 0.4: usar como diseño de referencia un libro abierto con escenas pop-up de volumen real que emergen de sus páginas, según el estándar aprobado en «Le habían enseñado a pensar». Leer references/calidad-popup.md antes de diseñar; leer references/animaciones.md y references/animaciones-3d.md antes de construir escenas. Adaptar las animaciones al contenido: el despliegue visual no reemplaza la demostración pedagógica. El usuario puede pedir explícitamente 2D u otro estilo; respetar esa preferencia.
+Versión 0.5: usar como diseño de referencia un libro abierto con escenas pop-up de volumen real que emergen de sus páginas, según el estándar aprobado en «Le habían enseñado a pensar». Leer references/calidad-popup.md antes de diseñar; leer references/animaciones.md y references/animaciones-3d.md antes de construir escenas. Adaptar las animaciones al contenido: el despliegue visual no reemplaza la demostración pedagógica. El usuario puede pedir explícitamente 2D u otro estilo; respetar esa preferencia.
 
 Transformá el PDF o texto suministrado en una experiencia de aprendizaje para adultos, en español de Argentina salvo indicación distinta. Producí el libro ejecutable, no solamente un resumen o un plan. El usuario puede adjuntar un PDF, aportar texto o identificar un libro existente. La skill organiza un flujo asistido mediante las herramientas del entorno; requiere construir y verificar el libro en cada ejecución.
 
@@ -63,6 +63,10 @@ Incluir evaluación final alineada a los objetivos, con preguntas de aplicación
 - Ofrecer Ver esquema 2D y descripción textual completa; conservar decisiones y aprendizaje si WebGL falla o se pierde. Declarar que la experiencia principal es 3D y cuál es la alternativa. No afirmar que se entregó 3D si solo pudo construirse 2D.
 - Verificar canvas WebGL con geometrías reales, rotación y zoom, selección de ramas, pausa del objeto, final de recorrido, reducción de movimiento, teclado, celular y recuperación ante falta de WebGL. No considerar una captura como prueba de funcionamiento interactivo.
 
+## 2.3. Cierre del aprendizaje y constancia
+
+Incluir al final una celebración breve del recorrido completado y una constancia PDF descargable, siguiendo references/cierre-y-constancia.md. Vincular el cierre a criterios visibles y adecuados al curso; separar finalización de dominio acreditado. La animación no debe bloquear el feedback ni depender de sonido, y debe tener variante estática para reducción de movimiento. Generar el PDF localmente con nombre, título, fecha y resultado cuando corresponda; llamarlo Constancia de finalización para recorridos autogestionados, sin firmas ni avales inventados. El ejemplo del barómetro usa 3 de 4 aciertos y reflexión final escrita; adaptar el criterio a otros cursos, sin imponer ese número a toda evaluación.
+
 ## 3. Construir el libro
 
 Se incluyen una plantilla Three.js y referencias técnicas bajo esta misma carpeta. Leer references/arquitectura.md y references/diseno-pliegos.md antes de usar el motor. Para construir un libro pop-up, consultar references/flujo-popup.md como manual técnico, subordinado a estas instrucciones. La narración sigue siendo opcional y se adapta al público.
@@ -83,6 +87,7 @@ Leer references/qa.md para el motor 3D y la matriz de aceptación en references/
 - Cobertura y trazabilidad de capítulos a páginas del PDF; muestreo adicional de tablas y contenidos críticos. Marcar lagunas, nunca rellenarlas como hechos.
 - Coherencia entre objetivos, explicaciones y evaluación; respuestas y feedback correctos.
 - Funcionamiento de índice, navegación, progreso, reinicio, actividades, pausa y reducción de movimiento.
+- Cierre y PDF: probar criterios incompletos y cumplidos, reintentos, cambios que invalidan la finalización, recarga y borrado; comprobar nombres y datos, generar un PDF real y revisar su renderizado. Distinguir estos controles de la prueba en navegador del botón de descarga y la animación.
 - En navegador cuando esté disponible: móvil y escritorio, sin desbordamientos ni errores en consola, rótulos legibles, actividad resoluble y cambio de capítulo limpio. No afirmar pruebas visuales o de navegador si no pudieron ejecutarse.
 - El HTML compilado no depende de CDN ni rutas del proyecto y no tiene credenciales ni marcadores pendientes. Comprobar ausencia de solicitudes externas cuando se prometa funcionamiento offline.
 

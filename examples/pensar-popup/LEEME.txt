@@ -29,3 +29,19 @@ Ver verificacion.txt para el detalle.
 LICENCIA
 Three.js 0.186.1 está incorporado en index.html. Se conserva su licencia MIT
 en THREE-LICENSE.txt.
+
+CIERRE Y CONSTANCIA (versión 0.5)
+En el capítulo 6, comprobá la evaluación y escribí tu reflexión final.
+Con al menos 3 respuestas correctas de 4 y una reflexión escrita, pulsá
+Finalizar recorrido. Aparece el sello animado (estático con movimiento reducido).
+Ingresá tu nombre y pulsá Descargar constancia PDF. Se genera en el dispositivo.
+La constancia incluye fecha de finalización, título y resultado; no es un aval institucional.
+El nombre no se guarda en el progreso. Cambiar respuestas o reflexión invalida
+la finalización; se puede volver a finalizar. No se revocan PDF ya descargados.
+pdf-lib 1.17.1 está incorporado; licencia en PDF-LIB-LICENSE.txt.
+
+PRUEBAS DEL CIERRE
+15 comprobaciones adicionales de requisitos y PDF; flujo de controles con DOM
+simulado; PDF renderizados e inspeccionados con nombres de ejemplo, largos y Unicode
+con fuentes disponibles. La prueba visual de la animación y la descarga en navegador
+real siguen pendientes. No se afirma validación en teléfono físico.

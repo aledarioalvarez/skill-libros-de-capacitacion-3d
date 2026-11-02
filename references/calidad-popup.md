@@ -51,3 +51,8 @@ Entregar `index.html` autónomo, guía, ZIP, licencias y breve instrucción de a
 | Autonomía | Abrir el HTML final y comprobar recursos y solicitudes externas, además de revisar contenido del ZIP. |
 
 Realizar las pruebas de navegador cuando haya una herramienta autorizada disponible. Si no puede utilizarse, completar las verificaciones posibles y declarar el impedimento y lo pendiente en la entrega. Un DOM simulado, una compilación correcta o una captura por sí solos no prueban interacción real, WebGL ni compatibilidad móvil. No presentar esa limitación como el estándar deseable: buscar validación visual en las próximas ejecuciones que lo permitan.
+
+## Cierre del recorrido
+
+Aplicar `cierre-y-constancia.md` para la celebración final y el PDF. La animación de cierre acompaña evidencia concreta de finalización; no reemplaza las actividades ni certifica dominio profesional. El ejemplo de referencia incorpora este flujo y documenta su alcance de pruebas.
+
